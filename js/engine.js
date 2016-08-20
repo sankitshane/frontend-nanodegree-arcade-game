@@ -94,6 +94,9 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
+        if(star.count%2 ==0 && star.count != 0)
+        selector.update();
+        star.update();
         player.update();
     }
 
@@ -109,11 +112,13 @@ var Engine = (function(global) {
          */
         var rowImages = [
                 'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
                 'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/stone-block.png',   // Row 1 of 4 of stone
+                'images/stone-block.png',   // Row 2 of 4 of stone
+                'images/stone-block.png',   // Row 3 of 4 of stone
+            //    'images/stone-block.png',   // Row 4 of 4 of stone
+                'images/grass-block.png',   // Row 2 of 2 of glass
+                'images/water-block.png'    // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -150,8 +155,13 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
-
+        if(selector.stat == true && star.count%2 ==0)
+        {
+          selector.render();
+        }
+        star.render();
         player.render();
+
     }
 
     /* This function does nothing but it could have been a good place to
@@ -167,6 +177,13 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
+      'images/char-princess-girl.png',
+      'images/char-cat-girl.png',
+      'images/char-horn-girl.png',
+      'images/char-pink-girl.png',
+      'images/Rock.png',
+        'images/Selector.png',
+        'images/Star.png',
         'images/stone-block.png',
         'images/water-block.png',
         'images/grass-block.png',
