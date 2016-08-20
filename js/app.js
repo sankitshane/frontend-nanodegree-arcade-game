@@ -112,7 +112,7 @@ star.prototype.update = function() {
   {
     this.count++;
     this.reset();
-    if(star.count %2 ==0 && star.count != 0 )
+    if(star.count %5 ==0 && star.count != 0 )
     selector.stat = true;
   }
 };
