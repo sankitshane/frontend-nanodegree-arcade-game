@@ -1,3 +1,22 @@
 body {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #03A9F4;
+}
+
+.demo-card-wide.mdl-card {
+  width: 300px;
+  height: 570px;
+  margin: 50px;
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background-color: #3F51B5;
+}
+.demo-card-wide > .mdl-card__supporting-text {
+  background-color: #C5CAE9;
 }
