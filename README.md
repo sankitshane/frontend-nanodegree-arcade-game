@@ -2,7 +2,7 @@
 **Let's Collect As Many Stars As Possible.**
 
 ###Where to Play 
-[Click here]() and start playing.
+[Click here]('https://sankitshane.github.io/frontend-nanodegree-arcade-game/') and start playing.
 
 ###How to play
 
