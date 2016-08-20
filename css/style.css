@@ -15,8 +15,10 @@ body {
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
-  background-color: #3F51B5;
+  background: url('Poly.jpg') center / cover ;
 }
+
 .demo-card-wide > .mdl-card__supporting-text {
-  background-color: #C5CAE9;
+  height:90px;
+  background-color: #FF5252;
 }
