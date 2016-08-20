@@ -94,7 +94,7 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
-        if(star.count%2 ==0 && star.count != 0)
+        if(star.count%5 ==0 && star.count != 0)
         selector.update();
         star.update();
         player.update();
@@ -155,7 +155,7 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
-        if(selector.stat == true && star.count%2 ==0)
+        if(selector.stat == true && star.count%5 ==0)
         {
           selector.render();
         }
