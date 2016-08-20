@@ -23,10 +23,10 @@ Enemy.prototype.update = function(dt) {
     }
     if (this.y == player.y && (this.x > player.x - 20 && this.x < player.x + 20))
     {
+      star.reset();
       player.reset();
       selector.stat = false;
       star.count = 0;
-      star.reset();
     }
 };
 
@@ -62,6 +62,7 @@ player.prototype.reset = function() {
 player.prototype.update = function() {
     this.x = this.x;
     this.y = this.y;
+    document.getElementsByClassName('score')[0].innerHTML = star.count;
 };
 
 player.prototype.render = function () {
@@ -109,6 +110,7 @@ var star = function(x,y){
 star.prototype.update = function() {
   if (this.y == player.y && (this.x > player.x - 20 && this.x < player.x + 20))
   {
+    this.count++;
     this.reset();
     if(star.count %2 ==0 && star.count != 0 )
     selector.stat = true;
@@ -123,7 +125,6 @@ star.prototype.reset = function() {
   this.x = xVals[Math.floor(Math.random() *5)];
   this.y = yVals[Math.floor(Math.random() *3)];
   this.sprite = 'images/Star.png';
-  this.count++;
 };
 
 var selector = function(x,y) {
